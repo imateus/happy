@@ -1,7 +1,11 @@
 import express from 'express';
 
+import './database/connection';
+
 const app = express();
 
-app.get('/users')
+app.use(express.json());
 
-app.listen(3333)
+app.get('/users');
+
+app.listen(3333);
